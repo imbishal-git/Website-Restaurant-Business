@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purbeli Cuisine</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
     <div class="container">
         <h1>Purbeli Cuisine</h1>
         <div class="navbar">
-            <ul>
+            <ul id="sidemenu">
+                <li><i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i></li>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
                  <li><a href="#">SERVICES</a></li>
@@ -21,11 +23,14 @@
                 <li><a href="#">CONTACT</a></li>
                 <li><a class="reservation" href="#">RESERVATION</a></li>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </div>
     </div>
 </header>
+</div>
     <div class="content">
-        <h3>Welcome to Purbeli Cuisine</h3>
+        <h3>Welcome to
+             Purbeli Cuisine</h3>
         <h1>Rich Healthy and Natural Food</h1>
         <p>Purbeli Cuisine is a restaurant located in Nepal. We have some amazing recipes and dishes which are more popular in Eastern part of Nepal which is made by the most talented chefs in the country.</p>
     </div>
@@ -35,5 +40,32 @@
     <div class="submit">
         <a href="#">Submit</a>
     </div>
+     <script>
+        var tablinks = document.getElementByClassName("tab-links");
+        var tabcontents = document.getElementByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }  
+        </script>
+        <script>
+    var sidemenu= document.getElementById("sidemenu");
+   function openmenu(){
+    sidemenu.style.right="0";
+   }
+    function closemenu(){
+    sidemenu.style.right="-200px";
+   }
+    </script>
 </body>
 </html>
