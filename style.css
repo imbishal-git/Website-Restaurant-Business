@@ -5,12 +5,15 @@
 }
 
 body{
-    background: rgba(0,0,0,0.7) url('Foody.jpg');
+    background-image: url('Foody.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode:lighten;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.navbar .fa-solid {
+  display: none;
+ }
 
 .container{
     display: flex;
@@ -123,4 +126,169 @@ body{
 .submit a:hover{
     color:greenyellow;
     background-color: blueviolet;
+}
+@media only screen and (max-width: 600px){
+    body{
+    background-image: url('Foody.jpg') ;
+    background-size:  400px 795px;
+    background-repeat: no-repeat;
+    background-blend-mode:lighten;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container h1{
+    color: orangered;
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.container h1:hover{
+    color:aqua;
+    transform: translate(-5px);
+}
+.navbar ul li{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 4px;
+    transition: 3.5s;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover{
+    color: aqua;
+    box-shadow: 0 3px 50px orangered inset, 0 3px 50px orangered inset,0 3px 50px orangered inset,0 3px 50px orangered inset;
+}
+
+.navbar .reservation{
+    padding: 8px;
+    background-color:orangered;
+}
+.navbar .reservation:hover{
+    color: aqua;
+    background-color: black;
+}
+.content{
+    position: absolute;
+    color:green;
+    top:  30%;
+    left: 15%;
+    font-weight: bold;
+}
+.content:hover{
+    transform:translate(10px);
+}
+
+.content h3{
+    font-family: sans-serif;
+    font-size: 29px;
+    margin-left: 4.5%;
+    font-weight: bold;
+    color: yellow;
+    margin-top: -100px;
+    
+}
+.content h3:hover{
+   color:greenyellow;
+}
+
+.content h1{
+    font-size: 50px;
+}
+.content p{
+    font-size: 15px;
+    font-weight: bold;
+    color:blue;
+   margin-left: -4%;
+}
+.search{
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 40%;
+}
+.search input{
+    margin-top: 70px;
+    outline: none;
+    border: none;
+    padding: 12px 40px;
+    font-size: 10px;
+    width: 100%;
+    font-weight: bold;
+    margin-left: -54px;
+}
+.search input:hover{
+    color:black;
+    background-color: aqua 0.3s;
+    
+}
+
+.submit{
+    position: absolute;
+    margin-top: 135%;
+    margin-left: 37%;
+}
+
+.submit a{
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 25px;
+    background-color: orangered;
+    font-weight:bold;
+    font-size: 11px;
+}
+.submit a:hover{
+    color:greenyellow;
+    background-color: blueviolet;
+}
+#sidemenu{
+  background-color: #ff004f;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  right: -120px;
+  bottom: 52%;
+  width: 110px;
+  z-index: 2;
+  transition: right 0.8s;
+}
+.reservation{
+    margin-left: -5px;
+}
+#sidemenu li{
+   margin-top:2px;
+   margin-left: 5px;
+   font-size: 14px;
+}
+ .fa-bars {
+  display: block;
+  font-size: 25px;
+  margin-left: -40px;
+ }
+ .fa-circle-xmark{
+    display: block;
+    margin-left: 32px;
+    font-size: 25px;
+ }
+nav ul .fa-solid{
+position: absolute;
+top: 25px;
+left: 15px;
+cursor: pointer;
+}
+.navbar .fa-bars{
+    display:block;
+}
+.navbar .fa-circle-xmark{
+    display: block;
+
+}
+
+
 }
